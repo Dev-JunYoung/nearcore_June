@@ -1,0 +1,30 @@
+
+[package]
+name = "near-account-id-fuzz"
+version = "0.0.0"
+authors.workspace = true
+publish = false
+edition.workspace = true
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys.workspace = true
+borsh.workspace = true
+serde_json.workspace = true
+
+[dependencies.near-account-id]
+path = ".."
+
+[[bin]]
+name = "serde"
+path = "fuzz_targets/serde.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "borsh"
+path = "fuzz_targets/borsh.rs"
+test = false
+doc = false

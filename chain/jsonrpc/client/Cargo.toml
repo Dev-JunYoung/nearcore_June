@@ -1,0 +1,16 @@
+[package]
+name = "near-jsonrpc-client"
+version = "0.0.0"
+authors.workspace = true
+publish = false
+edition.workspace = true
+
+[dependencies]
+actix-http.workspace = true
+awc.workspace = true
+futures.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+near-jsonrpc-primitives.workspace = true
+near-primitives.workspace = true

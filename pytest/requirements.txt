@@ -1,0 +1,17 @@
+PyGithub
+base58
+cython
+deepdiff
+ed25519
+numpy
+prometheus-client
+psutil
+pynacl
+python-rc==0.3.9
+requests
+retrying
+scikit-learn
+scipy
+semver
+toml
+tqdm

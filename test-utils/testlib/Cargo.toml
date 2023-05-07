@@ -1,0 +1,21 @@
+[package]
+name = "testlib"
+version = "0.0.0"
+authors.workspace = true
+publish = false
+edition.workspace = true
+
+[dependencies]
+
+
+once_cell.workspace = true
+
+near-chain-configs.workspace = true
+near-chain.workspace = true
+near-crypto.workspace = true
+near-primitives.workspace = true
+near-test-contracts.workspace = true
+node-runtime.workspace = true
+
+[features]
+default = []

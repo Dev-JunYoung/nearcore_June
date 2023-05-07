@@ -1,0 +1,13 @@
+[package]
+name = "near-performance-metrics-macros"
+version = "0.0.0"
+authors.workspace = true
+edition.workspace = true
+publish = false
+
+[dependencies]
+quote.workspace = true
+syn.workspace = true
+
+[lib]
+proc-macro = true

@@ -1,0 +1,33 @@
+[package]
+name = "near-vm-runner-fuzz"
+version = "0.0.0"
+authors.workspace = true
+publish = false
+edition.workspace = true
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+arbitrary.workspace = true
+libfuzzer-sys.workspace = true
+wasm-smith.workspace = true
+wasmprinter.workspace = true
+
+near-primitives.workspace = true
+near-test-contracts.workspace = true
+near-vm-errors.workspace = true
+near-vm-logic.workspace = true
+near-vm-runner.workspace = true
+
+[[bin]]
+name = "runner"
+path = "fuzz_targets/runner.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "diffrunner"
+path = "fuzz_targets/diffrunner.rs"
+test = false
+doc = false

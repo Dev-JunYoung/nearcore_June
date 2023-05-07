@@ -1,0 +1,30 @@
+[package]
+name = "near-jsonrpc-primitives"
+version = "0.0.0"
+authors.workspace = true
+publish = true
+# Please update rust-toolchain.toml as well when changing version here:
+rust-version.workspace = true
+edition.workspace = true
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/near/nearcore"
+description = "This crate hosts structures for the NEAR JSON RPC Requests, Responses and Error types"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+arbitrary.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+
+near-crypto.workspace = true
+near-primitives.workspace = true
+near-chain-configs.workspace = true
+near-rpc-error-macro.workspace = true
+near-client-primitives = { workspace = true, optional = true }
+
+[features]
+full = ["debug_types"]
+debug_types = ["near-client-primitives"]
+test_features = []

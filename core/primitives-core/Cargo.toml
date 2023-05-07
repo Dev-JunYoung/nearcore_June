@@ -1,0 +1,37 @@
+[package]
+name = "near-primitives-core"
+version = "0.0.0"
+authors.workspace = true
+publish = true
+# Please update rust-toolchain.toml as well when changing version here:
+rust-version.workspace = true
+edition.workspace = true
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/near/nearcore"
+description = """
+This crate provides the core set of primitives used by other nearcore crates including near-primitives
+"""
+
+[dependencies]
+arbitrary.workspace = true
+base64.workspace = true
+borsh.workspace = true
+bs58.workspace = true
+derive_more.workspace = true
+enum-map.workspace = true
+num-rational.workspace = true
+serde.workspace = true
+serde_repr.workspace = true
+sha2.workspace = true
+strum.workspace = true
+thiserror.workspace = true
+
+near-account-id.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
+insta.workspace = true
+
+[features]
+default = []
+nightly = []
